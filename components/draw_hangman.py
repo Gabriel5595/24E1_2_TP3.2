@@ -4,6 +4,7 @@ def draw_hangman(errors):
     0
 
 You have 1 error so far.
+
 """)
     elif errors == 2:
         print("""
@@ -11,6 +12,7 @@ You have 1 error so far.
    /
 
 You have 2 error so far.
+
 """)
     elif errors == 3:
         print("""
@@ -18,6 +20,7 @@ You have 2 error so far.
    /|
 
 You have 3 error so far.
+
 """)
     elif errors == 4:
         print("""
@@ -25,6 +28,7 @@ You have 3 error so far.
    /|\\
 
 You have 4 error so far.
+
 """)
     elif errors == 5:
         print("""
@@ -33,6 +37,7 @@ You have 4 error so far.
    /
 
 You have 5 error so far.
+
 """)
     elif errors == 6:
         print("""
