@@ -12,14 +12,17 @@ def main():
         global_guess = []
         errors = 0
         while errors <= 5:
-            print(hidden)
-            print(guess)
-            print(global_guess)
+            print(f"Correct guesses: {guess}")
+            print(f"Guesses so far: {global_guess}")
             print("\n")
             
             letter = input("Please guess a letter: ")
             
-            if check_letter(global_guess, letter):
+            used_letter, global_guess = check_letter(global_guess, letter)
+            
+            print(used_letter)
+
+            if used_letter:
                 guess, correct_letter = compare_words(hidden, guess, letter)
                 
                 if correct_letter:
@@ -35,9 +38,8 @@ def main():
                 else:
                     errors += 1
                     draw_hangman(errors)
-            
+
             else:
                 print("This letter has already been selected. Please select another.\n")
-
 
 main()

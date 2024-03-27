@@ -1,5 +1,6 @@
 def check_letter(global_guess, letter):
-    if letter.upper() in global_guess:
-        return False
+    if letter in global_guess:
+        return False, global_guess
     else:
-        return True
+        global_guess.append(letter)
+        return True, global_guess
